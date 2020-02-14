@@ -1,0 +1,26 @@
+#include <math.h>
+#include <conio.h>
+#include <stdio.h>
+
+int main (void)
+{float i, x, xant, e;
+printf("POR EL METODO DE PUNTO FIJO\n");
+printf("Vamos a calcular la raiz de \n f(x)=-X-e^-X\n");
+printf("SINEDO X=e^-X\n");
+printf("DAME X0\n");
+scanf("%f",&x);
+e=1;
+while(e>=0.01)
+{
+    x=exp(-xant);
+    e=fabs(x-xant);
+    i++;
+    printf("iteracion%.0f= %.3f\t error igual a%.4f\n",i,x,e);
+    xant=x;
+}
+printf("\n\nEl valor de la raiz es igual a %.3f\n\n",x);
+printf("error igual a %.3f\n\n",e);
+printf("numero de iteraciones %.0f\n\n",i);
+system("\npause");
+return 0;
+}
